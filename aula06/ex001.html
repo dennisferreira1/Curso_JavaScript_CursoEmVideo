@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+  
+</head>
+<body>
+    <br>
+    <script>
+       var nome = window.prompt("Digite seu nome")
+       window.alert(`Seu nome é ${nome}`)
+       document.write(`Seu nome é <strong>${nome}</strong> e ele tem ${nome.length} letras <br/>`)
+       document.write(`Seu nome com letras maiúsculas: <strong>${nome.toUpperCase()}</strong> <br/>`)
+
+       var n1 = window.prompt("Digite um número")
+       var n2 = window.prompt("Digite outro número")
+       var s = parseFloat(n1) + parseFloat(n2)
+       window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+       //convertendo o valor da soma para mostar como valor monetário
+       var valor = s.toLocaleString('pt-br', {style:'currency', currency:'brl'})
+       document.write(valor)
+    </script>
+</body>
+</html>
