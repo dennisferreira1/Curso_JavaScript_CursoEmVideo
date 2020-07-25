@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM</title>
+    <style>
+        body{
+            background-color: rgb(98, 98, 243);
+            color: #fff;
+            font-size: normal 25pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Iniciando estudos DOM</h1>
+    <p class="paragrafo">Aqui vai o resultado</p>
+    <p class="paragrafo">Aprendendo a usar o <strong>DOM</strong> em javascript</p>
+    <div id="msg">Clique em mim</div>
+    <div name="testeName"></div>
+    <script>
+       window.document.body.style.background = "#555"
+
+       var p1 = window.document.getElementsByTagName('p')[0]
+       var p2 = window.document.getElementsByTagName('p')[1]
+       p1.style.color = "yellow"
+
+       document.write(p2.innerText + " - texto inserido com innerText" + "<br>")
+       document.write(p2.innerHTML + " - texto inserido com innerHTML")
+    
+       var msg = document.getElementById('msg')
+       msg.innerHTML = 'Texto mudado com javascript <br><br>'
+
+       var div = document.getElementsByName("testeName")[0]
+       div.innerHTML = "Texto mudado com javascript <br><br>"
+       div.style.backgroundColor = "green"
+
+       // Forma mais atual para selecionar elementos no documento html
+       var h = document.querySelector('h1#h1')
+       h.style.background = "red"
+
+       var paragrafos = document.querySelectorAll('p.paragrafo')
+       document.write("<br><br>" + paragrafos[0].innerHTML)
+       document.write("<br>" + paragrafos[1].innerHTML)
+    
+    </script>
+</body>
+</html>
