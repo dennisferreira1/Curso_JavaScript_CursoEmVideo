@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+            background-color: yellow;
+        }
+        #nId1, #nId2{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            text-align: center;
+            font: normal 15pt arial;
+        }
+        #botao{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="nName1" id="nId1"> +
+    <input type="number" name="nName2" id="nId2">
+    <input type="button" value="SOMAR" id= "botao" onclick="somar()">
+    <h2 id="res">Resultado: </h2>
+
+    <script>
+        function somar(){
+            var n1 = parseInt(document.querySelector("#nId1").value)
+            var n2 = parseInt(document.querySelector('#nId2').value)
+            var s = n1+n2
+            var res = document.querySelector('#res')
+
+            res.innerText = "Resultado: " + s
+        }
+    </script>
+</body>
+</html>

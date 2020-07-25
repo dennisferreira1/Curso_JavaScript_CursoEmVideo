@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#div-interaja{
+            background-color: rgb(128, 184, 16);
+            color: #fff;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div-interaja" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+        var divInteraja = window.document.getElementById("div-interaja")
+
+        /*
+        Outra forma de fazer é adicionando ouvintes de eventos
+        Não precisa adicionar os atributos de eventos no código html
+        
+        divInteraja.addEventListener('click', clicar)
+        divInteraja.addEventListener('mouseenter', entrar)
+        divInteraja.addEventListener('mouseout', sair)
+        */
+        
+        function clicar(){
+            divInteraja.innerText = "Clicou!"
+            divInteraja.style.backgroundColor = "red"
+        }
+        function entrar(){
+            divInteraja.innerText = "Entrou!"
+        }
+        function sair(){
+            divInteraja.innerText = "Saiu!"
+            divInteraja.style.backgroundColor = "rgb(128, 184, 16)"
+        }
+        
+    </script>
+    
+</body>
+</html>
